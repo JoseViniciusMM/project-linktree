@@ -1,68 +1,106 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-  font-family: 'Inter', sans-serif;
+  --primary-color: #EB5E67;
+  --bg-button: #FFFFFF;
+  --text-dark: #333333;
+  --text-light: #FFFFFF;
+  --radius-btn: 16px;
+  --radius-circle: 50%;
+  --gap-main: 1.5rem;
+  --font-main: 'Inter', sans-serif;
+}
 
+body {
+  font-family: var(--font-main);
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
-  padding: 2rem;
-  width: 395px;
-  height: 852px;
-  background-color: #EB5E67;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 395px;
+  min-height: 852px;
+  background-color: var(--primary-color);
+  color: var(--text-light);
 }
 
-.card .profile {
+.card-header {
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-circle);
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.name {
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 
 .card-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 100%;
   gap: 1rem;
-
 }
 
 .button {
-  align-self: start;
-  align-items: center;
   display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
   height: 57px;
-  width: 294px;
-  background-color: #fff;
-  font-size: 1rem;
-  border-radius: 16px;
+  width: 100%;
+  background-color: var(--bg-button);
+  color: var(--text-dark);
   text-decoration: none;
-  border: #fff;
+  border-radius: var(--radius-btn);
+  font-weight: 500;
+  transition: opacity 0.2s;
 }
 
-
-.card-footer {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.button.outline {
+  background-color: transparent;
+  border: 2px solid var(--bg-button);
+  color: var(--text-light);
 }
 
-.img {
+.button:hover {
+  opacity: 0.9;
+}
+
+.icon {
   width: 24px;
   height: 24px;
+  margin-right: 1rem;
 }
 
-
-.button :hover {
-  background-color: #fff;
-  color: #EB5E67;
-  border: 1px solid #EB5E67;
+.card-footer {
+  margin-top: var(--gap-main);
 }
 
+.qr-code {
+  width: 130px;
+  height: 130px;
+  background: white;
+  padding: 5px;
+}
