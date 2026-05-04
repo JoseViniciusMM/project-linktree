@@ -4,9 +4,23 @@
 }
 
 :root {
-  font-family: 'Inter', sans-serif;
+  --fonte-principal: 'Inter', 'Arial', sans-serif;
+  
+  --cor-fundo-card: #EB5E67;
+  --cor-botao-bg: #FFFFFF;
+  --cor-botao-texto: #000000;
+  --cor-botao-hover-texto: #EB5E67;
+  
+  --btn-largura: 294px;
+  --btn-altura: 57px;
+  --btn-radius: 16px;
+  
+  --gap-padrao: 1rem;
+  --padding-card: 2rem;
 
 }
+
+
 
 .card {
   display: flex;
